@@ -1,16 +1,74 @@
 {
-  "name": "1",
-  "version": "1.0.0",
-  "description": "2",
-  "main": "index.js",
+  "name": "{{ name }}",
+  "version": "0.1.0",
+  "description": "{{ description }}"
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "test": "vue-cli-service serve --mode test",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://gitee.com/chenyaoqiang11/dlcil.git"
+  "dependencies": {
+    "autoprefixer": "9.8.6",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "lib-flexible": "^0.3.2",
+    "mescroll.js": "^1.4.2",
+    "postcss-px2rem-exclude": "^0.0.6",
+    "vconsole": "^3.4.0",
+    "vue": "^3.0.0",
+    "vue-cli-plugin-postcss-preset": "^1.0.2",
+    "vue-router": "4",
+    "weixin-js-sdk": "^1.6.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 2
+      },
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "last 10 Chrome versions",
+          "last 5 Firefox versions",
+          "Safari >= 6",
+          "ie> 8"
+        ]
+      },
+      "postcss-px2rem-exclude": {
+        "remUnit": 75,
+        "exclude": "/node_modules|floder_name/i"
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
