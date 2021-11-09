@@ -1,0 +1,16 @@
+{
+  "name": "dlcil",
+  "version": "1.0.0",
+  "description": "ces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/chenyaoqiang11/dlcil.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
